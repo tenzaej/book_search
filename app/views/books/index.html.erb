@@ -1,2 +1,6 @@
 <h3>Hello, World</h3>
-<p> The time is <%= Time.now %></p>
+
+<%= form_tag('/books', method: 'get', id: 'books-form') do %>
+  <input id="query-input" name="query" >
+  <button>Search</button>
+<% end %>
