@@ -1,4 +1,11 @@
 <div id="book-results" >
   <ul id="book-list">
+    <% @books['items'].each do |book| %>
+      <li class="book-listing">
+        <p>Title: <%= book.dig('volumeInfo', 'title') %></p>
+        <p>Author(s): <%= book.dig('volumeInfo', 'authors') %></p>
+        <p>Publisher: <%= book.dig('volumeInfo', 'publisher') %></p>
+      </li>
+    <% end %>
   </ul>
 </div>

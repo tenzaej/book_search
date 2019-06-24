@@ -6,14 +6,22 @@ RSpec.describe BooksController do
     expect(page).to have_content('Hello, World')
   end
 
-  scenario 'type in a query and display a list of books matching that query' do
+  scenario 'displays a list of books matching that query' do
+    # given
+    class_double('Net::HTTP')
+    expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-ligotti-response.json'))
+
+    # when
     visit '/'
-    within('#books-form') do
-      fill_in 'query', with: 'ligotti'
-    end
+    within('#books-form') { fill_in 'query', with: 'ligotti' }
     click_button 'Search'
 
-    expect(page).to have_selector('#book-results')
-    expect()
+    # then
+    within('#book-list') do
+      expect(page).to have_selector('.book-listing', count: 10)
+      expect(page).to have_selector('p', text: /Thomas Ligotti/)
+      expect(page).to have_selector('p', text: /Teatro Grottesco/)
+      expect(page).to have_selector('p', text: /Random House/)
+    end
   end
 end

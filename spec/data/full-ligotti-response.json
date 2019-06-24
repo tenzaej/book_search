@@ -1,0 +1,861 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1331,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "9eoC_cGOPiEC",
+   "etag": "wmww4mNwc/E",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/9eoC_cGOPiEC",
+   "volumeInfo": {
+    "title": "Teatro Grottesco",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2009-11-24",
+    "description": "Thomas Ligotti is often cited as the most curious and remarkable figure in horror literature since H. P. Lovecraft. His work is noted by critics for its display of an exceptionally grotesque imagination and accomplished prose style. In his stories, Ligotti has followed a literary tradition that began with Edgar Allan Poe, portraying characters that are outside of anything that might be called normal life, depicting strange locales far off the beaten track, and rendering a grim vision of human existence as a perpetual nightmare. The horror stories collected in Teatro Grottesco feature tormented individuals who play out their doom in various odd little towns, as well as in dark sectors frequented by sinister and often blackly comical eccentrics. The cycle of narratives introduce readers to a freakish community of artists who encounter demonic perils that ultimately engulf their lives.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780753525173"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0753525178"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 288,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 8,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.10.9.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=9eoC_cGOPiEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=9eoC_cGOPiEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=9eoC_cGOPiEC&printsec=frontcover&dq=ligotti&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=9eoC_cGOPiEC&dq=ligotti&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Teatro_Grottesco.html?hl=&id=9eoC_cGOPiEC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Teatro_Grottesco-sample-epub.acsm?id=9eoC_cGOPiEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=9eoC_cGOPiEC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The horror stories collected in Teatro Grottesco feature tormented individuals who play out their doom in various odd little towns, as well as in dark sectors frequented by sinister and often blackly comical eccentrics."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "x7VMDwAAQBAJ",
+   "etag": "O7LiJxyJvr8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/x7VMDwAAQBAJ",
+   "volumeInfo": {
+    "title": "The Conspiracy against the Human Race",
+    "subtitle": "A Contrivance of Horror",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2018-10-02",
+    "description": "In Thomas Ligotti's first nonfiction outing, an examination of the meaning (or meaninglessness) of life through an insightful, unsparing argument that proves the greatest horrors are not the products of our imagination but instead are found in reality. \"There is a signature motif discernible in both works of philosophical pessimism and supernatural horror. It may be stated thus: Behind the scenes of life lurks something pernicious that makes a nightmare of our world.\" His fiction is known to be some of the most terrifying in the genre of supernatural horror, but Thomas Ligotti's first nonfiction book may be even scarier. Drawing on philosophy, literature, neuroscience, and other fields of study, Ligotti takes the penetrating lens of his imagination and turns it on his audience, causing them to grapple with the brutal reality that they are living a meaningless nightmare, and anyone who feels otherwise is simply acting out an optimistic fallacy. At once a guidebook to pessimistic thought and a relentless critique of humanity's employment of self-deception to cope with the pervasive suffering of their existence, The Conspiracy against the Human Race may just convince readers that there is more than a measure of truth in the despairing yet unexpectedly liberating negativity that is widely considered a hallmark of Ligotti's work.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780525504917"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0525504915"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 272,
+    "printType": "BOOK",
+    "categories": [
+     "Literary Criticism"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.3.2.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=x7VMDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=x7VMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=x7VMDwAAQBAJ&printsec=frontcover&dq=ligotti&hl=&cd=2&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=x7VMDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-x7VMDwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 13.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 13.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=x7VMDwAAQBAJ&rdid=book-x7VMDwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.399E7,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.399E7,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Conspiracy_against_the_Human_Race-sample-epub.acsm?id=x7VMDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=x7VMDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "In Thomas Ligotti&#39;s first nonfiction outing, an examination of the meaning (or meaninglessness) of life through an insightful, unsparing argument that proves the greatest horrors are not the products of our imagination but instead are found ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "GqZKtwAACAAJ",
+   "etag": "5AWy6MMSvEw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/GqZKtwAACAAJ",
+   "volumeInfo": {
+    "title": "Grimscribe",
+    "subtitle": "His Lives and Works",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Subterranean Press",
+    "publishedDate": "2011-07-31",
+    "description": "The second volume in a series of revised editions of the horror story collections of Thomas Ligotti.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1596064099"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781596064096"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 226,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 2.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=GqZKtwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=GqZKtwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=GqZKtwAACAAJ&dq=ligotti&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=GqZKtwAACAAJ&dq=ligotti&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Grimscribe.html?hl=&id=GqZKtwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=GqZKtwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The second volume in a series of revised editions of the horror story collections of Thomas Ligotti. “may perhaps be the very best homage to Lovecraft ever written.” Like the stories in Songs of a Dead Dreamer, the first title of ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "XTddywAACAAJ",
+   "etag": "fszY7rbzk5o",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/XTddywAACAAJ",
+   "volumeInfo": {
+    "title": "Noctuary",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Subterranean",
+    "publishedDate": "2012-06-30",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1596064706"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781596064706"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 207,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=XTddywAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=XTddywAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=XTddywAACAAJ&dq=ligotti&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=XTddywAACAAJ&dq=ligotti&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Noctuary.html?hl=&id=XTddywAACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=XTddywAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Shadow, Blackness, Night: these are substance and signification of the themes of Ligotti&#39;s works and the signature of gloom in which they are signed. New to Noctuary are the terse pieces of the volumes&#39; third section."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8ZEmdrGTd10C",
+   "etag": "tUjSHg8h7uQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8ZEmdrGTd10C",
+   "volumeInfo": {
+    "title": "My Work Is Not Yet Done",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Random House",
+    "publishedDate": "2011-05-31",
+    "description": "When junior manager Frank Dominio is suddenly demoted and then sacked it seems there was more than a grain of truth to his persecution fantasies. But as he prepares to even the score with those responsible for his demise, he unwittingly finds an ally in a dark and malevolent force that grants him supernatural powers. Frank takes his revenge in the most ghastly ways imaginable - but there will be a terrible price to pay once his work is done. Destined to be a cult classic, this tale of corporate horror and demonic retribution will strike a chord with anyone who has ever been disgruntled at work.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780753547182"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "075354718X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 192,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.10.6.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8ZEmdrGTd10C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8ZEmdrGTd10C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=8ZEmdrGTd10C&printsec=frontcover&dq=ligotti&hl=&cd=5&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=8ZEmdrGTd10C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-8ZEmdrGTd10C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 11.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.59,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=8ZEmdrGTd10C&rdid=book-8ZEmdrGTd10C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.199E7,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9590000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/My_Work_Is_Not_Yet_Done-sample-epub.acsm?id=8ZEmdrGTd10C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=8ZEmdrGTd10C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Destined to be a cult classic, this tale of corporate horror and demonic retribution will strike a chord with anyone who has ever been disgruntled at work."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "pt2iYM_e3UcC",
+   "etag": "vnIqbjqoC10",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/pt2iYM_e3UcC",
+   "volumeInfo": {
+    "title": "The Nightmare Factory",
+    "authors": [
+     "Thomas Ligotti",
+     "Stuart Moore",
+     "Joe Harris"
+    ],
+    "publisher": "Harper Collins",
+    "publishedDate": "2007-09-04",
+    "description": "\"A fractured mind is often the way into a world not suspected by those of an innocent normality.\" Enter the universe of renowned horror master Thomas Ligotti—a universe where clowns take part in a sinister winter festival, a scheming girlfriend makes reality itself come unraveled, a crumbling asylum's destruction unleashes a greater horror, and a mysterious Teatro comes and goes, leaving only shattered dreams in its wake. In the tradition of Edgar Allan Poe and H. P. Lovecraft, Ligotti's sophisticated tales of terror take us to places few would suspect exist, where madness is only a thought away. The Nightmare Factory adapts four of Ligotti's most chilling tales into fine graphic literature by famed writers and artists Stuart Moore, Joe Harris, Colleen Doran (The Sandman), Ben Templesmith (30 Days of Night), Ted McKeever (Batman), and Michael Gaydos (Alias). Featuring all-new introductions to each story by Thomas Ligotti.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780061243530"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0061243531"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 112,
+    "printType": "BOOK",
+    "categories": [
+     "Comics & Graphic Novels"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "comicsContent": true,
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=pt2iYM_e3UcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=pt2iYM_e3UcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=pt2iYM_e3UcC&printsec=frontcover&dq=ligotti&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=pt2iYM_e3UcC&dq=ligotti&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Nightmare_Factory.html?hl=&id=pt2iYM_e3UcC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=pt2iYM_e3UcC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The Nightmare Factory adapts four of Ligotti&#39;s most chilling tales into fine graphic literature by famed writers and artists Stuart Moore, Joe Harris, Colleen Doran (The Sandman), Ben Templesmith (30 Days of Night), Ted McKeever (Batman), ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "b7MrXWlBKIoC",
+   "etag": "wCoBOuQ27dg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/b7MrXWlBKIoC",
+   "volumeInfo": {
+    "title": "The Thomas Ligotti Reader",
+    "authors": [
+     "Darrell Schweitzer"
+    ],
+    "publisher": "Wildside Press LLC",
+    "publishedDate": "2003-01-01",
+    "description": "Ever since the first edition of Ligotti's \"Songs of a Dead Dreamer\" appeared in 1985, it was clear that here was an author of extraordinary brilliance. Now here is a book about him, a symposium of explorations and examinations of the Ligottian universe by leading critics.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781592241309"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1592241301"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 192,
+    "printType": "BOOK",
+    "categories": [
+     "Biography & Autobiography"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.1.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=b7MrXWlBKIoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=b7MrXWlBKIoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=b7MrXWlBKIoC&printsec=frontcover&dq=ligotti&hl=&cd=7&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=b7MrXWlBKIoC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-b7MrXWlBKIoC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 4.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 3.82,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=b7MrXWlBKIoC&rdid=book-b7MrXWlBKIoC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3820000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Thomas_Ligotti_Reader-sample-pdf.acsm?id=b7MrXWlBKIoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=b7MrXWlBKIoC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Now here is a book about him, a symposium of explorations and examinations of the Ligottian universe by leading critics."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "PnrdQwAACAAJ",
+   "etag": "RnfG2cSPjZY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/PnrdQwAACAAJ",
+   "volumeInfo": {
+    "title": "Songs of a Dead Dreamer",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Subterranean",
+    "publishedDate": "2010-03-31",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1596062967"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781596062962"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 282,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 2.5,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=PnrdQwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=PnrdQwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=PnrdQwAACAAJ&dq=ligotti&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=PnrdQwAACAAJ&dq=ligotti&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Songs_of_a_Dead_Dreamer.html?hl=&id=PnrdQwAACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=PnrdQwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Where it belongs.&quot; The revisions in the present volume of Songs of a Dead Dreamer have been calculated to make its stories into enhanced incarnations of the originals. This edition is and will remain definitive."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "KH_MBgAAQBAJ",
+   "etag": "82cFP9xD2/I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/KH_MBgAAQBAJ",
+   "volumeInfo": {
+    "title": "Songs of a Dead Dreamer and Grimscribe",
+    "authors": [
+     "Thomas Ligotti"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2015-10-06",
+    "description": "Two terrifying classics by “the best kept secret in contemporary horror fiction” (The Washington Post) Thomas Ligotti’s debut collection, Songs of a Dead Dreamer, and his second, Grimscribe, permanently inscribed a new name in the pantheon of horror fiction. Influenced by the strange terrors of Lovecraft and Poe and by the brutal absurdity of Kafka, Ligotti eschews cheap, gory thrills for his own brand of horror, which shocks at the deepest, existential, levels. Ligotti’s stories take on decaying cities and lurid dreamscapes in a style ranging from rich, ornamental prose to cold, clinical detachment. His raw and experimental work lays bare the unimportance of our world and the sickening madness of the human condition. Like the greatest writers of cosmic horror, Ligotti bends reality until it cracks, opening fissures through which he invites us to gaze on the unsettling darkness of the abyss below. For more than sixty-five years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,500 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators. From the Trade Paperback edition.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780698409286"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0698409280"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 464,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 4,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.4.4.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=KH_MBgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=KH_MBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=KH_MBgAAQBAJ&printsec=frontcover&dq=ligotti&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=KH_MBgAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-KH_MBgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 4.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 4.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=KH_MBgAAQBAJ&rdid=book-KH_MBgAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Songs_of_a_Dead_Dreamer_and_Grimscribe-sample-epub.acsm?id=KH_MBgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=KH_MBgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "4Qf0AAAAQBAJ",
+   "etag": "DPsCM5fjMr0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4Qf0AAAAQBAJ",
+   "volumeInfo": {
+    "title": "Weird Tales #327",
+    "authors": [
+     "Darrell Schweitzer",
+     "Thomas Ligotti",
+     "Stephen Gallagher",
+     "Tanith Lee",
+     "Ralph Gamelli"
+    ],
+    "publisher": "Wildside Press LLC",
+    "publishedDate": "2011-10-02",
+    "description": "Weird Tales #325 (Fall 2001) features \"From Out of the Crocodile's Mouth,\" by Darrell Schweitzer; \"The Gravedigger's Apprentice,\" by Alvin Helms; \"Our Temporary Supervisor,\" by Thomas Ligotti; \"Where All Things Perish,\" by Tanith Lee; \"The Wizard of Ashes and Rain,\" by David Sandner, and more.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781434437693"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1434437698"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 96,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.2.3.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4Qf0AAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4Qf0AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=4Qf0AAAAQBAJ&printsec=frontcover&dq=ligotti&hl=&cd=10&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=4Qf0AAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-4Qf0AAAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 2.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 2.51,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=4Qf0AAAAQBAJ&rdid=book-4Qf0AAAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 2990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 2510000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Weird_Tales_327-sample-epub.acsm?id=4Qf0AAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Weird_Tales_327-sample-pdf.acsm?id=4Qf0AAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=4Qf0AAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Weird Tales #325 (Fall 2001) features &quot;From Out of the Crocodile&#39;s Mouth,&quot; by Darrell Schweitzer; &quot;The Gravedigger&#39;s Apprentice,&quot; by Alvin Helms; &quot;Our Temporary Supervisor,&quot; by Thomas Ligotti; &quot;Where All Things Perish,&quot; by Tanith Lee; &quot;The ..."
+   }
+  }
+ ]
+}

@@ -10,7 +10,9 @@ RSpec.describe BooksController, type: :controller do                           #
 
     it 'calls off to the Google Books API endpoint with the query parameter' do
       class_double('Net::HTTP')
-      expect(Net::HTTP).to receive(:get).and_return({'items' => []}.to_json)
+      expect(Net::HTTP).
+        to receive(:get).
+             and_return({'items' => []}.to_json)
 
       get :show, params: {query: 'ligotti'}
 
