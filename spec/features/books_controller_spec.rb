@@ -17,7 +17,7 @@ RSpec.describe BooksController do
     click_button 'Search'
 
     # then
-    within('#book-list') do
+    within('#book-results') do
       expect(page).to have_selector('.book-listing', count: 10)
       expect(page).to have_selector('img')
       expect(page).to have_selector('p', text: /Thomas Ligotti/)
