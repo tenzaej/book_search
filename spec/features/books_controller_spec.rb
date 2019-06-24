@@ -19,9 +19,12 @@ RSpec.describe BooksController do
     # then
     within('#book-list') do
       expect(page).to have_selector('.book-listing', count: 10)
+      expect(page).to have_selector('img')
       expect(page).to have_selector('p', text: /Thomas Ligotti/)
       expect(page).to have_selector('p', text: /Teatro Grottesco/)
       expect(page).to have_selector('p', text: /Random House/)
+      expect(page).to have_link('Go to book listing on Google Books', href: 'http://books.google.com/books?id=9eoC_cGOPiEC&printsec=frontcover&dq=ligotti&hl=&cd=1&source=gbs_api')
     end
   end
+
 end
