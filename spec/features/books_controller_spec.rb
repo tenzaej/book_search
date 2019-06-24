@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BooksController do
   scenario 'going to the home page' do
     visit '/'
-    expect(page).to have_content('Hello, World')
+    expect(page).to have_content('Book Search')
   end
 
   scenario 'displays a list of books matching that query' do

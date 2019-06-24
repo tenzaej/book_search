@@ -1,3 +1,29 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+button.not-visible {
+    visibility: hidden;
+}
+
+hr {
+    border: solid #80cbc4;
+}
+
+input#query-input {
+    font-size: 24px;
+    color: #212121;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #212121;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #212121;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #212121;
+}
