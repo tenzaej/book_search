@@ -1,10 +1,11 @@
-require 'net/http'
-
 class BooksController < ApplicationController
   def show()
     @query = params['query']
-    uri = URI( "https://www.googleapis.com/books/v1/volumes?q=#{@query}")
-    json_response = Net::HTTP.get(uri)
-    @books = JSON.parse(json_response)
+    begin
+      @books = GoogleBooksApiClient.new(@query).call
+    rescue GoogleBooksApiClient::GoogleBooksApiError => e
+      Rails.logger.error e.message
+      render :index
+    end
   end
 end

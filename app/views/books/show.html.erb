@@ -1,4 +1,5 @@
-<div id="book-results" >
+<% if @books['items'] %>
+  <div id="book-results" >
     <% @books['items'].each do |book| %>
       <ul class="collection with-header">
         <li class="collection-item book-listing">
@@ -15,4 +16,5 @@
         </li>
       </ul>
     <% end %>
-</div>
+  </div>
+<% end %>
