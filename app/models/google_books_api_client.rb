@@ -27,6 +27,7 @@ class GoogleBooksApiClient
 
   def self.format_uri(query)
     query_string = "?q=#{query}"
-    URI(GOOGLE_BOOKS_BASE + query_string)
+    fields_specification = "&fields=items(volumeInfo(title,authors,publisher,previewLink,imageLinks(smallThumbnail)))"
+    URI(GOOGLE_BOOKS_BASE + query_string + fields_specification)
   end
 end

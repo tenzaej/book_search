@@ -4,9 +4,9 @@ require 'net/http'
 RSpec.describe GoogleBooksApiClient do
   describe '#format_uri' do
     it 'formats the query string to specification' do
-      complicated_title = 'A Sermon [on Amos iv. 12] preached at the funeral of ... W. Earle, etc'
-      expect(GoogleBooksApiClient.format_uri(complicated_title)).
-        to eq(URI('https://www.googleapis.com/books/v1/volumes?q=A%20Sermon%20[on%20Amos%20iv.%2012]%20preached%20at%20the%20funeral%20of%20...%20W.%20Earle,%20etc'))
+      query = 'Alvin Roth'
+      expect(GoogleBooksApiClient.format_uri(query)).
+        to eq(URI('https://www.googleapis.com/books/v1/volumes?q=Alvin%20Roth&fields=items(volumeInfo(title,authors,publisher,previewLink,imageLinks(smallThumbnail)))'))
     end
   end
   describe '#call' do

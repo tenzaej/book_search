@@ -10,7 +10,7 @@ RSpec.describe BooksController do
   scenario 'displays a list of books matching that query' do
     # given
     class_double('Net::HTTP')
-    expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-ligotti-response.json'))
+    expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
     # when
     visit '/'
@@ -21,10 +21,10 @@ RSpec.describe BooksController do
     within('#book-results') do
       expect(page).to have_selector('.book-listing', count: 10)
       expect(page).to have_selector('img')
-      expect(page).to have_selector('p', text: /Thomas Ligotti/)
-      expect(page).to have_selector('p', text: /Teatro Grottesco/)
-      expect(page).to have_selector('p', text: /Random House/)
-      expect(page).to have_link('Go to book listing on Google Books', href: 'http://books.google.com/books?id=9eoC_cGOPiEC&printsec=frontcover&dq=ligotti&hl=&cd=1&source=gbs_api')
+      expect(page).to have_selector('p', text: /Norbert Wiener/)
+      expect(page).to have_selector('p', text: /Cybernetics Or Control and Communication in the Animal and the Machine/)
+      expect(page).to have_selector('p', text: /MIT Press/)
+      expect(page).to have_link('Go to book listing on Google Books', href: 'http://books.google.com/books?id=NnM-uISyywAC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=1&source=gbs_api')
     end
   end
 
