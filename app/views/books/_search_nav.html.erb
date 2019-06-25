@@ -9,6 +9,11 @@
         <button class="not-visible">Search</button>
       <% end %>
     </div>
+
+    <% if @api_client&.page_number&.present? && @books %>
+      <%= render "page_nav" %>
+    <% end %>
+
   </nav>
   <hr>
 </div>
