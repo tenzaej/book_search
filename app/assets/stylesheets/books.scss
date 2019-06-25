@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.sticky-nav {
+    top:0px;
+    position:-webkit-sticky;
+    position:sticky;
+    z-index:1;
+    background:white;
+    padding-top:10px;
+    padding-bottom:0px;
+}
+
 button.not-visible {
     visibility: hidden;
 }

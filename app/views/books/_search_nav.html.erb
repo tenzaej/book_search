@@ -1,0 +1,14 @@
+<div class="sticky-nav" >
+  <h3>Book Search &nbsp; <img src="https://books.google.com/googlebooks/images/poweredby.png"></h3>
+
+  <nav>
+    <div class="nav-wrapper">
+      <%= form_tag("/books", method: "get", id: "books-form", class: "input-field teal lighten-3") do %>
+        <input id="query-input" type="search" placeholder="Enter search terms here" name="query" required value='<%= @query %>' >
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <button class="not-visible">Search</button>
+      <% end %>
+    </div>
+  </nav>
+  <hr>
+</div>
