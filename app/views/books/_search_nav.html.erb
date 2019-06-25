@@ -10,10 +10,9 @@
       <% end %>
     </div>
 
-    <% if @api_client&.page_number&.present? && @books %>
-      <%= render "page_nav" %>
-    <% end %>
-
   </nav>
+  <% if @api_client&.page_number&.present? && @books %>
+    <%= render "page_nav" %>
+  <% end %>
   <hr>
 </div>
