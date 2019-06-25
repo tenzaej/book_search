@@ -1,31 +1,46 @@
 require 'rails_helper'
 
 RSpec.describe BooksController, type: :controller do
-  let("api_client") { double(:api_client, {call: ['list of books data']}) }
+  let("book_collection") { double(:book_collection, {})}
+  let!("parsed_response") do
+    {"items" => [
+       {"volumeInfo" => {
+          "title" => "Cybernetics",
+          "authors" => ["Norbert Wiener"],
+          "publisher" => "MIT Press",
+          "imageLinks" => {
+            "smallThumbnail" => "http://books.google.com/books/content?id=NnM-uISyywAC"
+          },
+          "previewLink" => "http://books.google.com/books?id=NnM-uISyywAC"
+        }},
+     ]}
+  end
+  let("api_client") { double(:api_client, {call: parsed_response}) }
 
   describe 'show' do
     before(:each) do
       class_double('GoogleBooksApiClient')
       class_double('BookCollection')
       allow(GoogleBooksApiClient).to receive(:new).and_return(api_client)
-      allow(BookCollection).to receive_message_chain(:new, :assemble).and_return(['books'])
+      allow(BookCollection).to receive(:new).and_return(book_collection)
+      allow(book_collection).to receive(:assemble).and_return(book_collection)
     end
 
-    it "assigns the query and books" do
-      get :show, params: {query: ' ligotti  '}
-      expect(assigns[:query]).to eq('ligotti')
-      expect(assigns[:books]).to eq(['books'])
+    it 'assigns the api_client and books' do
+        get :show, params: {query: 'Cybernetics'}
+        expect(assigns[:api_client]).to eq(api_client)
+        expect(assigns[:books]).to eq(book_collection)
     end
 
     it 'calls off to the Google Books API endpoint with the query parameter' do
-      get :show, params: {query: 'ligotti'}
-      expect(GoogleBooksApiClient).to have_received(:new).with('ligotti')
+      get :show, params: {query: 'Cybernetics'}
+      expect(GoogleBooksApiClient).to have_received(:new).with({'query' => 'Cybernetics'})
       expect(api_client).to have_received(:call)
     end
 
     it 'assembles a BookCollection based on response from the API call' do
-      get :show, params: {query: 'ligotti'}
-      expect(BookCollection).to have_received(:new).with(['list of books data'])
+      get :show, params: {query: 'Cybernetics'}
+      expect(BookCollection).to have_received(:new).with(parsed_response)
     end
 
     context 'when no books are returned from Google Books API' do
@@ -40,7 +55,7 @@ RSpec.describe BooksController, type: :controller do
         allow(Rails).to receive(:logger).and_return(rails_logger)
       end
 
-      it 'renders the index page' do
+      it 'renders the index page instead of the show' do
         get :show, params: {query: 'the rarest book ever'}
 
         expect(response).to render_template(:index)
