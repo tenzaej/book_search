@@ -1,10 +1,11 @@
 class BooksController < ApplicationController
   def show()
-    @query = params['query']
+    @query = params['query'].strip
     begin
-      @books = GoogleBooksApiClient.new(@query).call
-    rescue GoogleBooksApiClient::GoogleBooksApiError => e
-      Rails.logger.error e.message
+      parsed_response = GoogleBooksApiClient.new(@query).call
+      @books = BookCollection.new(parsed_response).assemble
+    rescue StandardError => e
+      Rails.logger.info e.message
       render :index
     end
   end

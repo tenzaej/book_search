@@ -4,6 +4,7 @@ RSpec.describe BooksController do
   scenario 'going to the home page' do
     visit '/'
     expect(page).to have_content('Book Search')
+    expect(page).to have_selector('#query-input')
   end
 
   scenario 'displays a list of books matching that query' do

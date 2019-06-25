@@ -42,7 +42,7 @@ RSpec.describe GoogleBooksApiClient do
                            and_return(error_response.to_json)
 
       expect{ GoogleBooksApiClient.new('Jonathon Swift').call }.
-        to raise_error(GoogleBooksApiClient::GoogleBooksApiError)
+        to raise_error(GoogleBooksApiClient::ErrorResponse)
     end
   end
 end

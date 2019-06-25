@@ -1,20 +1,18 @@
-<% if @books['items'] %>
-  <div id="book-results" >
-    <% @books['items'].each do |book| %>
-      <ul class="collection with-header">
-        <li class="collection-item book-listing">
-          <div class="left">
-            <img src='<%= book.dig('volumeInfo', 'imageLinks', 'smallThumbnail') %>', class="responsive-image">
-          </div>
-          <div style="margin-left:200px;">
-            <p>Title: <%= book.dig('volumeInfo', 'title') %></p>
-            <p>Author(s): <%= book.dig('volumeInfo', 'authors') %></p>
-            <p>Publisher: <%= book.dig('volumeInfo', 'publisher') %></p>
-            <a href='<%= book.dig('volumeInfo', 'previewLink') %>'>Go to book listing on Google Books</a>
-          </div>
-          <div class="clearfix"></div>
-        </li>
-      </ul>
-    <% end %>
-  </div>
-<% end %>
+<div id="book-results" >
+  <% @books.each do |book| %>
+    <ul class="collection with-header">
+      <li class="collection-item book-listing">
+        <div class="left">
+          <img src='<%= book.thumbnail %>', class="responsive-image">
+        </div>
+        <div style="margin-left:200px;">
+          <p>Title: <%= book.title %></p>
+          <p>Author(s): <%= book.authors %></p>
+          <p>Publisher: <%= book.publisher %></p>
+          <a href='<%= book.preview_link %>'>Go to book listing on Google Books</a>
+        </div>
+        <div class="clearfix"></div>
+      </li>
+    </ul>
+  <% end %>
+</div>

@@ -1,7 +1,8 @@
 require 'net/http'
 
 class GoogleBooksApiClient
-  class GoogleBooksApiError < StandardError; end
+  class ErrorResponse < StandardError; end
+  class EmptyResponse < StandardError; end
 
   GOOGLE_BOOKS_BASE = 'https://www.googleapis.com/books/v1/volumes'
 
@@ -15,9 +16,13 @@ class GoogleBooksApiClient
     parsed_response = JSON.parse(json_response)
     if parsed_response["error"]
       error_message = "Google Books API returned a code #{parsed_response.dig('error', 'code')} with the message '#{parsed_response.dig('error', 'message')}'"
-      raise GoogleBooksApiError.new(error_message)
+      raise ErrorResponse.new(error_message)
+    elsif parsed_response["items"].nil?
+      error_message = "Google Books API returned zero results for query '#{@query}'"
+      raise EmptyResponse.new(error_message)
+    else
+      parsed_response
     end
-    parsed_response
   end
 
   def self.format_uri(query)
