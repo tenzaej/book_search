@@ -9,7 +9,7 @@ The goal with this minimalist Book Search is for users to be able to:
 
 As I said above, minimalist.
 
-#### Some quick thoughts:
+#### Some thoughts:
 
 1. For my day job, I primarily do a lot of backend work with an older Ruby on Rails app, and service some Clojure microservices here and there, which have no frontends to speak of. Our product is very customizable, and there is a whole other team which works on this customization, so I don't get to exercise my frontend skills very often. So, this was my first time using Materialize, and I spent a bit of time reading about pagination, navigation, organizing things, etc. So if there are any glaring issues with it, or easy-wins that I passed by, I'm still learning, and would appreciate any feedback on that front.
 2. It has been years since I deployed anything to Heroku. The app can be found at [here](https://shrouded-everglades-99818.herokuapp.com/). If I continued working on this, I might like to explore some more of the add-ons that it offers, but for now, it's a website and it is live.
