@@ -1,22 +1,22 @@
 <ul class="pagination">
-  <% if @api_client.page_number > 1 %>
+  <% if @client.page_number > 1 %>
     <li class="waves-effect previous-button">
-      <a href="<%= books_url(query: @api_client.query,
-                             page_number: (@api_client.page_number - 1)) %>" >
+      <a href="<%= books_url(query: @client.query,
+                             page_number: (@client.page_number - 1)) %>" >
         <i class="material-icons">chevron_left</i>
       </a>
     </li>
   <% end %>
 
-  <% (calculate_page_range(@api_client.page_number, @books.try(:count))).each do |n| %>
-    <li class='<%= @api_client.page_number == n ? "page-number teal lighten-3 active white-text" : "page-number waves-effect" %>' >
-      <%= link_to n, books_path(query: @api_client.query, page_number: n) %>
+  <% (calculate_page_range(@client.page_number, @books.try(:count))).each do |n| %>
+    <li class='<%= @client.page_number == n ? "page-number teal lighten-3 active white-text" : "page-number waves-effect" %>' >
+      <%= link_to n, books_path(query: @client.query, page_number: n) %>
     </li>
   <% end %>
 
   <% if @books&.count == 10 %>
     <li class="waves-effect next-button">
-      <a href=<%= books_url(query: @api_client.query, page_number: (@api_client.page_number + 1)) %> >
+      <a href=<%= books_url(query: @client.query, page_number: (@client.page_number + 1)) %> >
         <i class="material-icons">chevron_right</i>
       </a>
     </li>

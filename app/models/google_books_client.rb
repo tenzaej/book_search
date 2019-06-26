@@ -1,6 +1,6 @@
 require 'net/http'
 
-class GoogleBooksApiClient
+class GoogleBooksClient
   class ErrorResponse < StandardError; end
   class EmptyResponse < StandardError; end
 

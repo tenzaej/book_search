@@ -15,27 +15,27 @@ RSpec.describe BooksController, type: :controller do
         }},
      ]}
   end
-  let("api_client") { double(:api_client, {call: parsed_response}) }
+  let("client") { double(:client, {call: parsed_response}) }
 
   describe 'show' do
     before(:each) do
-      class_double('GoogleBooksApiClient')
+      class_double('GoogleBooksClient')
       class_double('BookCollection')
-      allow(GoogleBooksApiClient).to receive(:new).and_return(api_client)
+      allow(GoogleBooksClient).to receive(:new).and_return(client)
       allow(BookCollection).to receive(:new).and_return(book_collection)
       allow(book_collection).to receive(:assemble).and_return(book_collection)
     end
 
-    it 'assigns the api_client and books' do
+    it 'assigns the client and books' do
         get :show, params: {query: 'Cybernetics'}
-        expect(assigns[:api_client]).to eq(api_client)
+        expect(assigns[:client]).to eq(client)
         expect(assigns[:books]).to eq(book_collection)
     end
 
     it 'calls off to the Google Books API endpoint with the query parameter' do
       get :show, params: {query: 'Cybernetics'}
-      expect(GoogleBooksApiClient).to have_received(:new).with({'query' => 'Cybernetics'})
-      expect(api_client).to have_received(:call)
+      expect(GoogleBooksClient).to have_received(:new).with({'query' => 'Cybernetics'})
+      expect(client).to have_received(:call)
     end
 
     it 'assembles a BookCollection based on response from the API call' do
@@ -48,9 +48,9 @@ RSpec.describe BooksController, type: :controller do
       let("rails_logger") { double(:rails_logger, {info: nil}) }
 
       before(:each) do
-        allow(api_client).
+        allow(client).
           to receive(:call).
-               and_raise(GoogleBooksApiClient::EmptyResponse.new(message))
+               and_raise(GoogleBooksClient::EmptyResponse.new(message))
         class_double('Rails')
         allow(Rails).to receive(:logger).and_return(rails_logger)
       end
@@ -73,9 +73,9 @@ RSpec.describe BooksController, type: :controller do
       let("rails_logger") { double(:rails_logger, {info: nil}) }
 
       before(:each) do
-        allow(api_client).
+        allow(client).
           to receive(:call).
-               and_raise(GoogleBooksApiClient::ErrorResponse.new(message))
+               and_raise(GoogleBooksClient::ErrorResponse.new(message))
         class_double('Rails')
         allow(Rails).to receive(:logger).and_return(rails_logger)
       end

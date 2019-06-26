@@ -1,8 +1,8 @@
 class BooksController < ApplicationController
   def show()
     begin
-      @api_client = GoogleBooksApiClient.new(query_params())
-      parsed_response = @api_client.call
+      @client = GoogleBooksClient.new(query_params())
+      parsed_response = @client.call
       @books = BookCollection.new(parsed_response).assemble
     rescue StandardError => e
       Rails.logger.info e.message
