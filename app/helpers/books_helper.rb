@@ -15,5 +15,4 @@ module BooksHelper
       link_to field, books_path(query: field).html_safe
     end
   end
-
 end
