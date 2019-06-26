@@ -1,15 +1,24 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the BooksHelper. For example:
-#
-# describe BooksHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe BooksHelper, type: :helper do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  describe '#generate_links' do
+    let(:a_publisher) { 'Leanpub' }
+    let(:some_authors) { ['Gilles Deleuze', 'Felix Guattari'] }
+
+    it "returns 'None Listed' if the field is nil" do
+      actual = helper.generate_links(nil)
+      expect(actual).to have_selector('p', text: 'None Listed')
+    end
+
+    it 'turns a single item into a single link' do
+      actual = helper.generate_links('Leanpub')
+      expect(actual).to have_link('Leanpub', href: '/books?query=Leanpub')
+    end
+
+    it 'turns a collection of items into a collection of links' do
+      actual = helper.generate_links(['Gilles Deleuze','Felix Guattari'])
+      expect(actual).to have_link('Gilles Deleuze', href: '/books?query=Gilles+Deleuze')
+      expect(actual).to have_link('Felix Guattari', href: '/books?query=Felix+Guattari')
+    end
+  end
 end
