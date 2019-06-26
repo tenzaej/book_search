@@ -21,4 +21,19 @@ RSpec.describe BooksHelper, type: :helper do
       expect(actual).to have_link('Felix Guattari', href: '/books?query=Felix+Guattari')
     end
   end
+
+  describe '#calculate_page_range' do
+    it 'handles a nil count, incase someone went forward too many pages' do
+      expect(calculate_page_range(7, 0)).to eq((2..7).to_a)
+    end
+    it 'does not show more next-pages if there are fewer than 10 books' do
+      expect(calculate_page_range(7, 3)).to eq((2..7).to_a)
+    end
+    it 'does not show negative page numbers' do
+      expect(calculate_page_range(3, 10)).to eq((1..8).to_a)
+    end
+    it 'attempts to show the range of +5/-5, given the current page' do
+      expect(calculate_page_range(7, 10)).to eq((2..12).to_a)
+    end
+  end
 end

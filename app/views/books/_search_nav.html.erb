@@ -11,7 +11,7 @@
     </div>
 
   </nav>
-  <% if @api_client && @books %>
+  <% if @api_client && @api_client.page_number > 1 %>
     <%= render "page_nav" %>
   <% end %>
   <hr>
