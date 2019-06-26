@@ -1,5 +1,5 @@
 class Book
-  READ_ONLY_FIELDS = [:title, :authors, :publisher, :thumbnail, :preview_link]
+  READ_ONLY_FIELDS = [:title, :authors, :publisher, :thumbnail, :info_link]
 
   attr_reader(*READ_ONLY_FIELDS)
 
@@ -9,7 +9,7 @@ class Book
     @authors = format_authors('authors')
     @publisher = format_publisher('publisher')
     @thumbnail = format_thumbnail('imageLinks','smallThumbnail')
-    @preview_link = format_preview_link('previewLink')
+    @info_link = format_info_link('infoLink')
   end
 
   READ_ONLY_FIELDS.each do |field|

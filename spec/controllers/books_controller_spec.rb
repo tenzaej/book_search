@@ -11,7 +11,7 @@ RSpec.describe BooksController, type: :controller do
           "imageLinks" => {
             "smallThumbnail" => "http://books.google.com/books/content?id=NnM-uISyywAC"
           },
-          "previewLink" => "http://books.google.com/books?id=NnM-uISyywAC"
+          "infoLink" => "http://books.google.com/books?id=NnM-uISyywAC"
         }},
      ]}
   end

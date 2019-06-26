@@ -4,7 +4,7 @@ The goal with this minimalist Book Search is for users to be able to:
 
 1. Type in a search term, and return for them a list of books matching that query, form the Google Books API.
 2. The listing for each book should show a picture of the book's cover, along with general information, eg author, title, publisher.
-3. The listing will _also_ provide a link to the Google Books page for this entry, so if they want to preview the book, buy it, get more information, they can do so.
+3. The listing will _also_ provide a link to the Google Books page for this entry, so if they want to info the book, buy it, get more information, they can do so.
 4. ...and then, Host it on Heroku, which is a thing I haven't done in a long while.
 
 As I said above, minimalist.

@@ -10,7 +10,7 @@ RSpec.describe BookCollection do
               "authors" => ["Thomas Ligotti"],
               "publisher" => "Random House",
               "imageLinks" => {"smallThumbnail" => "http://link.to/image.png"},
-              "previewLink" => "http://link.to/preview",
+              "infoLink" => "http://link.to/info",
             }
           },
           {
@@ -19,7 +19,7 @@ RSpec.describe BookCollection do
               "authors" => ["Robert C. Martin"],
               "publisher" => "Pearson Education",
               "imageLinks" => {"smallThumbnail" => "http://link.to/image.jpg"},
-              "previewLink" => "http://link.to/otherpreview",
+              "infoLink" => "http://link.to/otherinfo",
             }
           },
         ]

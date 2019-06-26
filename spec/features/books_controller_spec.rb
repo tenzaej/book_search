@@ -8,16 +8,13 @@ RSpec.describe BooksController do
   end
 
   scenario 'displays a list of books matching that query' do
-    # given
     class_double('Net::HTTP')
     expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
-    # when
     visit '/'
     within('#books-form') { fill_in 'query', with: 'Cybernetics' }
     click_button 'Search'
 
-    # then
     within('#book-results') do
       expect(page).to have_selector('.book-listing', count: 10)
       expect(page).to have_selector('img')
@@ -29,39 +26,31 @@ RSpec.describe BooksController do
   end
 
   scenario 'does not display book list if the response is blank' do
-    # given
     class_double('Net::HTTP')
     expect(Net::HTTP).to receive(:get).and_return({"kind"=>"books#volumes", "totalItems"=>0}.to_json)
 
-    # when
     visit '/'
     within('#books-form') { fill_in 'query', with: 'foobarbazquux' }
     click_button 'Search'
 
-    # then
     expect(page).to_not have_selector('#book-results')
   end
 
   feature 'pagination' do
     scenario 'when no query has been made' do
-      # when
       visit '/'
 
-      # then
       expect(page).to_not have_selector('ul.pagination')
     end
 
     scenario 'when a query has been made and there are results' do
-      # given
       class_double('Net::HTTP')
       expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
-      # when
       visit '/'
       within('#books-form') { fill_in 'query', with: 'Cybernetics' }
       click_button 'Search'
 
-      # then
       within('ul.pagination') do
         expect(page).to_not have_selector('li.previous-button')
         expect(page).to have_selector('li.page-number', count: 6)
@@ -70,14 +59,11 @@ RSpec.describe BooksController do
     end
 
     scenario 'when a query has been made and there are results' do
-      # given
       class_double('Net::HTTP')
       expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
-      # when
       visit '/books?query=Cybernetics&page_number=8'
 
-      # then
       within('ul.pagination') do
         expect(page).to have_selector('li.next-button')
         expect(page).to have_selector('li.page-number', count: 11)

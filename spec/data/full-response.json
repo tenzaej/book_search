@@ -10,7 +10,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=NnM-uISyywAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=NnM-uISyywAC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=1&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=NnM-uISyywAC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=1&source=gbs_api"
       }
     },
     {
@@ -23,7 +23,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=anD0BwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=anD0BwAAQBAJ&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=2&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=anD0BwAAQBAJ&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=2&source=gbs_api"
       }
     },
     {
@@ -36,7 +36,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=BMcBAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=BMcBAwAAQBAJ&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=3&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=BMcBAwAAQBAJ&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=3&source=gbs_api"
       }
     },
     {
@@ -49,7 +49,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=G3Q2qOtOeLYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=G3Q2qOtOeLYC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=4&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=G3Q2qOtOeLYC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=4&source=gbs_api"
       }
     },
     {
@@ -62,7 +62,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=o8ZxnFkK2wkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=o8ZxnFkK2wkC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=5&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=o8ZxnFkK2wkC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=5&source=gbs_api"
       }
     },
     {
@@ -74,7 +74,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=LNYrmwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=LNYrmwEACAAJ&dq=Norbert+Wiener&hl=&cd=6&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=LNYrmwEACAAJ&dq=Norbert+Wiener&hl=&cd=6&source=gbs_api"
       }
     },
     {
@@ -84,7 +84,7 @@
           "Norbert Wiener"
         ],
         "publisher": "MIT Press (MA)",
-        "previewLink": "http://books.google.com/books?id=2GQgAQAAIAAJ&dq=Norbert+Wiener&hl=&cd=7&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=2GQgAQAAIAAJ&dq=Norbert+Wiener&hl=&cd=7&source=gbs_api"
       }
     },
     {
@@ -96,7 +96,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=Xkr4ngEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=Xkr4ngEACAAJ&dq=Norbert+Wiener&hl=&cd=8&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=Xkr4ngEACAAJ&dq=Norbert+Wiener&hl=&cd=8&source=gbs_api"
       }
     },
     {
@@ -108,7 +108,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=2AKaAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=2AKaAAAAIAAJ&q=Norbert+Wiener&dq=Norbert+Wiener&hl=&cd=9&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=2AKaAAAAIAAJ&q=Norbert+Wiener&dq=Norbert+Wiener&hl=&cd=9&source=gbs_api"
       }
     },
     {
@@ -122,7 +122,7 @@
         "imageLinks": {
           "smallThumbnail": "http://books.google.com/books/content?id=GrI6yaK90EcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         },
-        "previewLink": "http://books.google.com/books?id=GrI6yaK90EcC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=10&source=gbs_api"
+        "infoLink": "http://books.google.com/books?id=GrI6yaK90EcC&printsec=frontcover&dq=Norbert+Wiener&hl=&cd=10&source=gbs_api"
       }
     }
   ]

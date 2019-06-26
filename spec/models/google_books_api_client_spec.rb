@@ -5,7 +5,7 @@ require './app/models/google_books_api_client'
 RSpec.describe GoogleBooksApiClient do
   describe '#call' do
     let(:response) { {"items" => []} }
-    let(:uri) { URI('https://www.googleapis.com/books/v1/volumes?q=Rich%20Hickey&fields=items(volumeInfo(title,authors,publisher,previewLink,imageLinks(smallThumbnail)))&startIndex=20') }
+    let(:uri) { URI('https://www.googleapis.com/books/v1/volumes?q=Rich%20Hickey&fields=items(volumeInfo(title,authors,publisher,infoLink,imageLinks(smallThumbnail)))&startIndex=20') }
     let(:error_response) do
       {"error" => {"errors" => [], "code" => 400, "message" => "Missing query."}}
     end

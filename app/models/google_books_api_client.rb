@@ -5,7 +5,7 @@ class GoogleBooksApiClient
   class EmptyResponse < StandardError; end
 
   GOOGLE_BOOKS_BASE = 'https://www.googleapis.com/books/v1/volumes'
-  FIELDS_SPECIFICATION = '&fields=items(volumeInfo(title,authors,publisher,previewLink,imageLinks(smallThumbnail)))'
+  FIELDS_SPECIFICATION = '&fields=items(volumeInfo(title,authors,publisher,infoLink,imageLinks(smallThumbnail)))'
 
   attr_reader :query, :page_number
 
