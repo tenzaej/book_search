@@ -52,7 +52,7 @@ RSpec.describe GoogleBooksClient do
       end
 
       it 'defaults to 1 if page_number parameter is missing' do
-        expect(GoogleBooksClient.new().page_number).to eq(1)
+        expect(GoogleBooksClient.new.page_number).to eq(1)
       end
     end
   end

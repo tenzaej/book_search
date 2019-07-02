@@ -6,7 +6,7 @@ class BookCollection
     @books = []
   end
 
-  def assemble()
+  def assemble
     @books = @raw_data['items'].map do |response|
       Book.new(response)
     end
