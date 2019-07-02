@@ -1,26 +1,12 @@
 class Book
-  READ_ONLY_FIELDS = [:title, :authors, :publisher, :thumbnail, :info_link]
-
-  attr_reader(*READ_ONLY_FIELDS)
+  attr_reader :title, :authors, :publisher, :thumbnail, :info_link
 
   def initialize(raw_data)
-    @raw_data = raw_data
-    @title = format_title('title')
-    @authors = format_authors('authors')
-    @publisher = format_publisher('publisher')
-    @thumbnail = format_thumbnail('imageLinks','smallThumbnail')
-    @info_link = format_info_link('infoLink')
-  end
-
-  READ_ONLY_FIELDS.each do |field|
-    define_method "format_#{field}".to_sym do |*keys|
-      volume_info.dig(*keys)
-    end
-  end
-
-  private
-
-  def volume_info
-    @raw_data['volumeInfo']
+    volume_info = raw_data['volumeInfo']
+    @title = volume_info.dig('title')
+    @authors = volume_info.dig('authors')
+    @publisher = volume_info.dig('publisher')
+    @thumbnail = volume_info.dig('imageLinks','smallThumbnail')
+    @info_link = volume_info.dig('infoLink')
   end
 end
