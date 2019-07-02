@@ -14,7 +14,7 @@
     </li>
   <% end %>
 
-  <% if @books&.count == 10 %>
+  <% if @books.count == 10 %>
     <li class="waves-effect next-button">
       <a href=<%= books_url(query: @client.query, page_number: (@client.page_number + 1)) %> >
         <i class="material-icons">chevron_right</i>
