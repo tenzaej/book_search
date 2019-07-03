@@ -8,13 +8,13 @@
     </li>
   <% end %>
 
-  <% (calculate_page_range(@client.page_number, @books.try(:count))).each do |n| %>
+  <% (calculate_page_range(@client.page_number, @books.size)).each do |n| %>
     <li class='<%= @client.page_number == n ? "page-number teal lighten-3 active white-text" : "page-number waves-effect" %>' >
       <%= link_to n, books_path(query: @client.query, page_number: n) %>
     </li>
   <% end %>
 
-  <% if @books.count == 10 %>
+  <% if @books.size == 10 %>
     <li class="waves-effect next-button">
       <a href=<%= books_url(query: @client.query, page_number: (@client.page_number + 1)) %> >
         <i class="material-icons">chevron_right</i>
