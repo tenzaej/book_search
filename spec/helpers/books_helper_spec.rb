@@ -16,7 +16,7 @@ RSpec.describe BooksHelper, type: :helper do
     end
 
     it 'turns a collection of items into a collection of links' do
-      actual = helper.generate_links(['Gilles Deleuze','Felix Guattari'])
+      actual = helper.generate_links(['Gilles Deleuze', 'Felix Guattari'])
       expect(actual).to have_link('Gilles Deleuze', href: '/books?query=Gilles+Deleuze')
       expect(actual).to have_link('Felix Guattari', href: '/books?query=Felix+Guattari')
     end
