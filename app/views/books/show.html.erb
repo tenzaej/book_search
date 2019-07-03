@@ -5,7 +5,7 @@
         <div class="left">
           <img src='<%= book.thumbnail %>', class="responsive-image">
         </div>
-        <div style="margin-left:200px;">
+        <div class="book-information">
           <p>Title: <%= book.title %></p>
           <p>Author(s): <%= generate_links(book.authors) %></p>
           <p>Publisher: <%= generate_links(book.publisher) %></p>
