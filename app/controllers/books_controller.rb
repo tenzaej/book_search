@@ -1,13 +1,11 @@
 class BooksController < ApplicationController
   def show
-    begin
-      @client = GoogleBooksClient.new(query_params)
-      parsed_response = @client.call
-      @books = BookCollection.new(parsed_response).assemble
-    rescue StandardError => e
-      Rails.logger.info e.message
-      render :index
-    end
+    @client = GoogleBooksClient.new(query_params)
+    parsed_response = @client.call
+    @books = BookCollection.new(parsed_response).assemble
+  rescue StandardError => e
+    Rails.logger.info e.message
+    render :index
   end
 
   private
