@@ -2,7 +2,6 @@ require 'net/http'
 
 class GoogleBooksClient
   class ErrorResponse < StandardError; end
-  class EmptyResponse < StandardError; end
 
   GOOGLE_BOOKS_BASE = 'https://www.googleapis.com/books/v1/volumes'
   FIELDS_SPECIFICATION = '&fields=items(volumeInfo(title,authors,publisher,infoLink,imageLinks(smallThumbnail)))'
@@ -20,9 +19,6 @@ class GoogleBooksClient
     if parsed_response['error']
       error_message = "Google Books API returned a code #{parsed_response.dig('error', 'code')} with the message '#{parsed_response.dig('error', 'message')}'"
       raise ErrorResponse, error_message
-    elsif parsed_response['items'].nil?
-      error_message = "Google Books API returned zero results for query '#{@query}'"
-      raise EmptyResponse, error_message
     else
       parsed_response
     end

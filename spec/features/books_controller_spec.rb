@@ -33,7 +33,7 @@ RSpec.describe BooksController do
     within('#books-form') { fill_in 'query', with: 'foobarbazquux' }
     click_button 'Search'
 
-    expect(page).to_not have_selector('#book-results')
+    expect(page).to_not have_selector('.book-listing')
   end
 
   feature 'pagination' do

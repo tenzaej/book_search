@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @books = BookCollection.new(parsed_response).assemble
   rescue StandardError => e
     Rails.logger.info e.message
-    render :index
+    @books = []
   end
 
   private
