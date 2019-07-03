@@ -6,7 +6,7 @@ class Book
     @title = volume_info.dig('title')
     @authors = volume_info.dig('authors')
     @publisher = volume_info.dig('publisher')
-    @thumbnail = volume_info.dig('imageLinks','smallThumbnail')
+    @thumbnail = volume_info.dig('imageLinks', 'smallThumbnail')
     @info_link = volume_info.dig('infoLink')
   end
 end

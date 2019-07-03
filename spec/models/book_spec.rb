@@ -5,12 +5,12 @@ RSpec.describe Book do
     context 'when fields are present, sets all instance variables' do
       let(:raw_data) do
         {
-          "volumeInfo" => {
-            "title" => "Teatro Grottesco",
-            "authors" => ["Thomas Ligotti"],
-            "publisher" => "Random House",
-            "imageLinks" => {"smallThumbnail" => "http://link.to/image.png"},
-            "infoLink" => "http://link.to/info",
+          'volumeInfo' => {
+            'title' => 'Teatro Grottesco',
+            'authors' => ['Thomas Ligotti'],
+            'publisher' => 'Random House',
+            'imageLinks' => {'smallThumbnail' => 'http://link.to/image.png'},
+            'infoLink' => 'http://link.to/info'
           }
         }
       end
@@ -23,7 +23,7 @@ RSpec.describe Book do
     end
 
     context 'when field(s) are absent, set to null' do
-      let(:raw_data) do {"volumeInfo" => {}} end
+      let(:raw_data) { { 'volumeInfo' => {} } }
 
       specify { expect(Book.new(raw_data).title).to be_nil }
       specify { expect(Book.new(raw_data).authors).to be_nil }
