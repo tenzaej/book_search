@@ -1,20 +1,51 @@
-# README
+## Book Search
 
-The goal with this minimalist Book Search is for users to be able to:
+### Description
 
-1. Type in a search term, and return for them a list of books matching that query, form the Google Books API.
-2. The listing for each book should show a picture of the book's cover, along with general information, eg author, title, publisher.
-3. The listing will _also_ provide a link to the Google Books page for this entry, so if they want to info the book, buy it, get more information, they can do so.
-4. ...and then, Host it on Heroku, which is a thing I haven't done in a long while.
+A no-frills app for searching for books and articles and such. It currently sends search terms along to Google Books API, and displays the book's cover, author, title, and publisher, along with a link to view the listing on Google Books itself.
 
-As I said above, minimalist.
+### How To Use
 
-#### Some thoughts:
+The app is currently hosted on Heroku, and so the easiest way to use it would be to visit it [here](https://shrouded-everglades-99818.herokuapp.com/). Just enter a search term, hit enter, and then view what comes up. Pagination will allow you to move forward and backward among results, and clicking on any listed author(s) or publisher will perform another search with that as the new search term.
 
-1. For my day job, I primarily do a lot of backend work with an older Ruby on Rails app, and service some Clojure microservices here and there, which have no frontends to speak of. Our product is very customizable, and there is a whole other team which works on this customization, so I don't get to exercise my frontend skills very often. So, this was my first time using Materialize, and I spent a bit of time reading about pagination, navigation, organizing things, etc. So if there are any glaring issues with it, or easy-wins that I passed by, I'm still learning, and would appreciate any feedback on that front.
-2. It has been years since I deployed anything to Heroku. The app can be found at [here](https://shrouded-everglades-99818.herokuapp.com/). If I continued working on this, I might like to explore some more of the add-ons that it offers, but for now, it's a website and it is live.
-3. This is also my first time doing anything with Capybara. Again, at my day job, the usual flow is that I write lots of unit tests, TDD'ing controllers and activerecord models and as many plain-old Ruby objects as possible (we make use of the repository pattern to try and add a level of abstraction there), and on rare occasion some jasmine tests for javascript. After the QA tests a piece of functionality, their notes get passed off to /another/ team, who uses some sort of Scala/Selenium framework for integration testing. I don't get to do integration tests at my current job, and thought I would take that on to learn with this assignment. At times it was a joy to go from nothing on a page to a working search with book listings, just based on failing specs, and only seeing my successful handiwork at the end. Other times, I wondered how much really needed to be tested. The rep is that integration tests are slower, and while with the size of my codebase I shouldn't have let that bother me too much, I still was trying to be mindful about testing as much as I could with as little 'navigation' as possible. So, might be too many expectations in some of those tests, I might be covering things that don't _really_ need to be covered, or I might have missed some big'uns. As with Materialize, any feedback for this assignment, or neat pointers in general, I'll gladly take.
-4. As I mentioned, dayjob in Rails. Given more time I might have liked to try to do this in Sinatra, as (at present) there's so little routing and no database, a lot of what Rails provides isn't needed here. I also thought about a single-page app in JavaScript, just using ajax calls and updating the DOM as need be, no real routing or page-navigation required. But, I haven't built an SPA before, and I'm sure there are wholesome design principles and different javascript frameworks and javascript testing frameworks, which I don't feel as strong with. I always like learning _something_ new with a new coding project, but felt if I took on too much, I wouldn't be able to speak to it as well when the time came ("I dunno, there was a Stack Overflow answer that said to..."), and I might misrepresent where I'm at, skill-wise. So, Rails it is. I did chop off the database though, so that was fun -- `rails new app -O` is a neat one.
-5. The Google Books API is neat and I wanted to make more use of the various options it had, but decided to keep it very basic this time around. After this is done though, I'll probably continue hacking on this project, lol. I feel like I'm an improved person for having done this, which is a rare thing to say about a coding challenge, so thank you for this.
-6. ...but on the topic of Google Books, one thing I'll say is that I wasn't sure how to deal with the *end* of the responses. They say in their documentation that the `totalItems` field in their json response shouldn't be counted upon. Refreshing the final page for a particular query would sometimes return more, or less, volumes. I wasn't sure how to deal with that, if there is a wholesome way to deal with it I'd love to hear it though. At present, my app recommends 5+ more pages if it's got a full response of 10 volumes. If you go one page up and there is anything less than 10 volumes, my app presumes that you've hit "the last page", and recommends 0 more pages and takes away the 'Next' button. Sorta-maybe jankey. ¯\_(ツ)_/¯
+### How To Run (locally)
+
+
+To run it locally, you'll first want to clone it from this repo:
+
+```
+git clone https://github.com/tenzaej/book_search.git
+```
+
+After that, go into the directory...
+
+```
+cd book_search
+```
+
+...and make sure you've got dependencies installed. This app uses ruby 2.5.5 and an assortment of gems, so use whatever ruby version manager you prefer, and install the dependencies. For me, it looks something like this:
+
+```
+rbenv install 2.5.5
+rbenv local 2.5.5
+gem install bundler
+bundle install
+```
+
+From there, you can start the server locally with
+
+```
+bundle exec rails server
+```
+
+If all is well, you should be able to navigate to localhost:3000 and start to search.
+
+### How To Run Tests
+
+After you have cloned the project and installed its various dependencies, running the tests locally consists of the following command:
+
+```
+bundle exec rspec
+```
+
 
