@@ -9,20 +9,20 @@ class GoogleBooksClient
 
   attr_reader :query, :page_number
 
-  def initialize(options={})
-    @query = options['query']
-    @page_number = format_page_number(options['page_number'])
+  def initialize(options = {})
+    @query = options[:query]
+    @page_number = format_page_number(options[:page_number])
   end
 
   def call
     json_response = Net::HTTP.get(formatted_uri)
     parsed_response = JSON.parse(json_response)
-    if parsed_response["error"]
+    if parsed_response['error']
       error_message = "Google Books API returned a code #{parsed_response.dig('error', 'code')} with the message '#{parsed_response.dig('error', 'message')}'"
-      raise ErrorResponse.new(error_message)
-    elsif parsed_response["items"].nil?
+      raise ErrorResponse, error_message
+    elsif parsed_response['items'].nil?
       error_message = "Google Books API returned zero results for query '#{@query}'"
-      raise EmptyResponse.new(error_message)
+      raise EmptyResponse, error_message
     else
       parsed_response
     end
