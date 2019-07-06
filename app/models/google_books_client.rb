@@ -45,10 +45,10 @@ class GoogleBooksClient
   end
 
   def query_string_parameter
-    "?q=#{@query}"
+    "?q=#{query}"
   end
 
   def start_index_parameter
-    "&startIndex=#{(@page_number - 1) * 10}"
+    "&startIndex=#{(page_number - 1) * 10}"
   end
 end
