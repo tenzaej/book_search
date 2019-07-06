@@ -14,8 +14,7 @@ class GoogleBooksClient
   end
 
   def call
-    json_response = Net::HTTP.get(formatted_uri)
-    parsed_response = JSON.parse(json_response)
+    parsed_response = JSON.parse(get_json_from_google_books)
     if parsed_response['error']
       error_message = "Google Books API returned a code #{parsed_response.dig('error', 'code')} with the message '#{parsed_response.dig('error', 'message')}'"
       raise ErrorResponse, error_message
@@ -25,6 +24,10 @@ class GoogleBooksClient
   end
 
   private
+
+  def get_json_from_google_books
+    Net::HTTP.get(formatted_uri)
+  end
 
   def formatted_uri
     full_query =
