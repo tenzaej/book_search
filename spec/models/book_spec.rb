@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 RSpec.describe Book do
-  describe '#initialize' do
-    context 'when fields are present, sets all instance variables' do
-      let(:raw_data) do
+  describe '#build_from_google_data' do
+    context 'sets instance variables from google books response map' do
+      let(:volume) do
         {
           'volumeInfo' => {
             'title' => 'Teatro Grottesco',
@@ -15,21 +15,11 @@ RSpec.describe Book do
         }
       end
 
-      specify { expect(Book.new(raw_data).title).to eq('Teatro Grottesco') }
-      specify { expect(Book.new(raw_data).authors).to eq(['Thomas Ligotti']) }
-      specify { expect(Book.new(raw_data).publisher).to eq('Random House') }
-      specify { expect(Book.new(raw_data).thumbnail).to eq('http://link.to/image.png') }
-      specify { expect(Book.new(raw_data).info_link).to eq('http://link.to/info') }
-    end
-
-    context 'when field(s) are absent, set to null' do
-      let(:raw_data) { { 'volumeInfo' => {} } }
-
-      specify { expect(Book.new(raw_data).title).to be_nil }
-      specify { expect(Book.new(raw_data).authors).to be_nil }
-      specify { expect(Book.new(raw_data).publisher).to be_nil }
-      specify { expect(Book.new(raw_data).thumbnail).to be_nil }
-      specify { expect(Book.new(raw_data).info_link).to be_nil }
+      specify { expect(Book.build_from_google_data(volume).title).to eq('Teatro Grottesco') }
+      specify { expect(Book.build_from_google_data(volume).authors).to eq(['Thomas Ligotti']) }
+      specify { expect(Book.build_from_google_data(volume).publisher).to eq('Random House') }
+      specify { expect(Book.build_from_google_data(volume).thumbnail).to eq('http://link.to/image.png') }
+      specify { expect(Book.build_from_google_data(volume).info_link).to eq('http://link.to/info') }
     end
   end
 end
