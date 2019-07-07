@@ -11,6 +11,8 @@ RSpec.describe BooksController, type: :controller do
       class_double('HttpClient')
       class_double('GoogleBooksStrategy')
       class_double('BookCollection')
+      class_double('Rails')
+      allow(Rails).to receive_message_chain(:cache, :fetch).and_yield
       allow(HttpClient).to receive(:new).and_return(client)
       allow(BookCollection).to receive(:new).and_return(book_collection)
       allow(GoogleBooksStrategy).to receive(:new).and_return(strategy)
@@ -23,6 +25,18 @@ RSpec.describe BooksController, type: :controller do
       expect(assigns[:query]).to eq('Cybernetics')
       expect(assigns[:page]).to eq(4)
       expect(assigns[:books]).to eq(book_collection)
+    end
+
+    it 'assigns books from the cache when present' do
+      class_double('Rails')
+      allow(Rails).to receive_message_chain(:cache, :fetch).and_return(book_collection)
+
+      get :show, params: {query: 'I Am A Strange Loop'}
+
+      expect(assigns[:books]).to eq(book_collection)
+      expect(GoogleBooksStrategy).to_not have_received(:new)
+      expect(HttpClient).to_not have_received(:new).with(strategy)
+      expect(client).to_not have_received(:call)
     end
 
     it 'calls off to the Google Books API endpoint with the query parameter' do
