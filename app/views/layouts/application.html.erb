@@ -23,8 +23,8 @@
         <%= render "search_nav", query: @client.query %>
 
         <div id="pagination-nav">
-          <% if @client && @books.size > 0 %>
-            <%= render "page_nav" %>
+          <% if @client && @books.count > 0 %>
+            <%= render "page_nav", client: @client, books: @books %>
           <% end %>
         </div>
         <hr>
