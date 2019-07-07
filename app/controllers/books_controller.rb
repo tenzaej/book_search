@@ -2,8 +2,11 @@ class BooksController < ApplicationController
   def show
     @page = query_params[:page].to_i
     @query = query_params[:query]
-    parsed_response = HttpClient.new(GoogleBooksStrategy.new(query_params)).call
-    @books = BookCollection.new(parsed_response).assemble
+    @books = Rails.cache.fetch([@query, @page]) do
+      Rails.logger.info "Making an API call for '#{@query}', page #{@page}"
+      parsed_response = HttpClient.new(GoogleBooksStrategy.new(query_params)).call
+      BookCollection.new(parsed_response).assemble
+    end
   rescue StandardError => e
     Rails.logger.info e.message
     @books = []

@@ -8,7 +8,9 @@ RSpec.describe BooksController do
   end
 
   scenario 'displays a list of books matching that query' do
+    class_double('Rails')
     class_double('Net::HTTP')
+    allow(Rails).to receive_message_chain(:cache, :fetch).and_yield
     expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
     visit '/'
@@ -26,7 +28,9 @@ RSpec.describe BooksController do
   end
 
   scenario 'does not display book list if the response is blank' do
+    class_double('Rails')
     class_double('Net::HTTP')
+    allow(Rails).to receive_message_chain(:cache, :fetch).and_yield
     expect(Net::HTTP).to receive(:get).and_return({"kind"=>"books#volumes", "totalItems"=>0}.to_json)
 
     visit '/'
@@ -43,8 +47,10 @@ RSpec.describe BooksController do
       expect(page).to_not have_selector('ul.pagination')
     end
 
-    scenario 'when a query has been made and there are results' do
+    scenario 'when a query has been made from the index page' do
+      class_double('Rails')
       class_double('Net::HTTP')
+      allow(Rails).to receive_message_chain(:cache, :fetch).and_yield
       expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
       visit '/'
@@ -58,14 +64,16 @@ RSpec.describe BooksController do
       end
     end
 
-    scenario 'when a query has been made and there are results' do
+    scenario 'when a query has been made past page 1' do
+      class_double('Rails')
       class_double('Net::HTTP')
+      allow(Rails).to receive_message_chain(:cache, :fetch).and_yield
       expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
       visit '/books?query=Cybernetics&page=8'
 
       within('ul.pagination') do
-        expect(page).to have_selector('li.next-button')
+        expect(page).to have_selector('li.previous-button')
         expect(page).to have_selector('li.page-number', count: 11)
         expect(page).to have_selector('li.next-button')
       end
