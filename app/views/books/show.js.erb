@@ -1,0 +1,2 @@
+document.getElementById('app-body').innerHTML = '<%= j render('/books/show') %>';
+document.getElementById('pagination-nav').innerHTML = '<%= j render('/books/page_nav', client: @client, books: @books ) %>';

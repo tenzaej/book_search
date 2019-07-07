@@ -12,13 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
   </head>
 
   <body>
     <div class="container" >
-      <%= render "search_nav" %>
-      <%= yield %>
+      <div class="sticky-nav" >
+        <h4>Book Search &nbsp; <a href="https://books.google.com"><%= image_tag('poweredbygoogle.png') %></a></h4>
+
+        <%= render "search_nav", query: @client.query %>
+
+        <div id="pagination-nav">
+          <% if @client && @books.size > 0 %>
+            <%= render "page_nav" %>
+          <% end %>
+        </div>
+        <hr>
+      </div>
+
+      <div id="app-body" >
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

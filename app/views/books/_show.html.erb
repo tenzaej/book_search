@@ -1,0 +1,18 @@
+<div id="book-results" >
+  <% @books.each do |book| %>
+    <ul class="collection with-header">
+      <li class="collection-item book-listing">
+        <div class="left">
+          <img src='<%= book.thumbnail %>', class="responsive-image">
+        </div>
+        <div class="book-information">
+          <p>Title: <%= book.title %></p>
+          <p>Author(s): <%= generate_links(book.authors) %></p>
+          <p>Publisher: <%= generate_links(book.publisher) %></p>
+          <a href='<%= book.info_link %>'>Go to book listing on Google Books</a>
+        </div>
+        <div class="clearfix"></div>
+      </li>
+    </ul>
+  <% end %>
+</div>
