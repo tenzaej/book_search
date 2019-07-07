@@ -17,6 +17,18 @@ RSpec.describe BooksController, type: :controller do
   end
   let('client') { double(:client, call: parsed_response) }
 
+  describe 'index' do
+    it 'initializes @books and @clients so partials work without issue' do
+      class_double('GoogleBooksClient')
+      allow(GoogleBooksClient).to receive(:new).and_return(client)
+
+      get :index
+
+      expect(assigns[:books]).to eq([])
+      expect(assigns[:client]).to eq(client)
+    end
+  end
+
   describe 'show' do
     before(:each) do
       class_double('GoogleBooksClient')

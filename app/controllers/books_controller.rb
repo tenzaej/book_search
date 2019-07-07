@@ -1,4 +1,9 @@
 class BooksController < ApplicationController
+  def index
+    @client = GoogleBooksClient.new
+    @books = []
+  end
+
   def show
     @client = GoogleBooksClient.new(query_params)
     parsed_response = @client.call
