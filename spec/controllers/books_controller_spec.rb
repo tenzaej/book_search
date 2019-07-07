@@ -1,52 +1,34 @@
 require 'rails_helper'
 
 RSpec.describe BooksController, type: :controller do
-  let('book_collection') { double(:book_collection, {}) }
-  let!('parsed_response') do
-    {'items' => [
-       {'volumeInfo' => {
-          'title' => 'Cybernetics',
-          'authors' => ['Norbert Wiener'],
-          'publisher' => 'MIT Press',
-          'imageLinks' => {
-            'smallThumbnail' => 'http://books.google.com/books/content?id=NnM-uISyywAC'
-          },
-          'infoLink' => 'http://books.google.com/books?id=NnM-uISyywAC'
-        }}
-     ]}
-  end
+  let('book_collection') { double(:book_collection) }
+  let!('parsed_response') { {'items' => []} }
   let('client') { double(:client, call: parsed_response) }
-
-  describe 'index' do
-    it 'initializes @books and @clients so partials work without issue' do
-      class_double('GoogleBooksClient')
-      allow(GoogleBooksClient).to receive(:new).and_return(client)
-
-      get :index
-
-      expect(assigns[:books]).to eq([])
-      expect(assigns[:client]).to eq(client)
-    end
-  end
+  let('strategy') { double(:strategy) }
 
   describe 'show' do
     before(:each) do
-      class_double('GoogleBooksClient')
+      class_double('HttpClient')
+      class_double('GoogleBooksStrategy')
       class_double('BookCollection')
-      allow(GoogleBooksClient).to receive(:new).and_return(client)
+      allow(HttpClient).to receive(:new).and_return(client)
       allow(BookCollection).to receive(:new).and_return(book_collection)
+      allow(GoogleBooksStrategy).to receive(:new).and_return(strategy)
       allow(book_collection).to receive(:assemble).and_return(book_collection)
     end
 
-    it 'assigns the client and books' do
-      get :show, params: { query: 'Cybernetics' }
-      expect(assigns[:client]).to eq(client)
+    it 'assigns local variables' do
+      get :show, params: { query: 'Cybernetics', page: 4 }
+
+      expect(assigns[:query]).to eq('Cybernetics')
+      expect(assigns[:page]).to eq(4)
       expect(assigns[:books]).to eq(book_collection)
     end
 
     it 'calls off to the Google Books API endpoint with the query parameter' do
       get :show, params: { query: 'Cybernetics' }
-      expect(GoogleBooksClient).to have_received(:new).with('query' => 'Cybernetics')
+      expect(GoogleBooksStrategy).to have_received(:new)
+      expect(HttpClient).to have_received(:new).with(strategy)
       expect(client).to have_received(:call)
     end
 
@@ -62,7 +44,7 @@ RSpec.describe BooksController, type: :controller do
       before(:each) do
         allow(client)
           .to receive(:call)
-          .and_raise(GoogleBooksClient::ErrorResponse.new(message))
+          .and_raise(GoogleBooksStrategy::ErrorResponse.new(message))
         class_double('Rails')
         allow(Rails).to receive(:logger).and_return(rails_logger)
       end

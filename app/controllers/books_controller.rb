@@ -1,12 +1,8 @@
 class BooksController < ApplicationController
-  def index
-    @client = GoogleBooksClient.new
-    @books = []
-  end
-
   def show
-    @client = GoogleBooksClient.new(query_params)
-    parsed_response = @client.call
+    @page = query_params[:page].to_i || 1
+    @query = query_params[:query]
+    parsed_response = HttpClient.new(GoogleBooksStrategy.new(query_params)).call
     @books = BookCollection.new(parsed_response).assemble
   rescue StandardError => e
     Rails.logger.info e.message
