@@ -20,11 +20,11 @@
       <div class="sticky-nav" >
         <h4>Book Search &nbsp; <a href="https://books.google.com"><%= image_tag('poweredbygoogle.png') %></a></h4>
 
-        <%= render "search_nav", query: @client.query %>
+        <%= render "search_nav", query: @query %>
 
         <div id="pagination-nav">
-          <% if @client && @books.count > 0 %>
-            <%= render "page_nav", client: @client, books: @books %>
+          <% if @page && @books.count > 0 %>
+            <%= render "page_nav", page: @page, query: @query, books: @books %>
           <% end %>
         </div>
         <hr>
