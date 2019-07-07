@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def show
-    @page = query_params[:page].to_i || 1
+    @page = query_params[:page].to_i
     @query = query_params[:query]
     parsed_response = HttpClient.new(GoogleBooksStrategy.new(query_params)).call
     @books = BookCollection.new(parsed_response).assemble
