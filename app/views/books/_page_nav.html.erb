@@ -1,22 +1,22 @@
 <ul class="pagination">
-  <% if client.page_number > 1 && books.size > 0 %>
+  <% if client.page > 1 && books.size > 0 %>
     <li class="waves-effect previous-button">
       <a href="<%= books_url(query: client.query,
-                             page_number: (client.page_number - 1)) %>" >
+                             page: (client.page - 1)) %>" >
         <i class="material-icons">chevron_left</i>
       </a>
     </li>
   <% end %>
 
-  <% (calculate_page_range(client.page_number, books.size)).each do |n| %>
-    <li class='<%= client.page_number == n ? "page-number teal lighten-3 active white-text" : "page-number waves-effect" %>' >
-      <%= link_to n, books_path(query: client.query, page_number: n) %>
+  <% (calculate_page_range(client.page, books.size)).each do |n| %>
+    <li class='<%= client.page == n ? "page-number teal lighten-3 active white-text" : "page-number waves-effect" %>' >
+      <%= link_to n, books_path(query: client.query, page: n) %>
     </li>
   <% end %>
 
   <% if books.size == 10 %>
     <li class="waves-effect next-button">
-      <a href=<%= books_url(query: client.query, page_number: (client.page_number + 1)) %> >
+      <a href=<%= books_url(query: client.query, page: (client.page + 1)) %> >
         <i class="material-icons">chevron_right</i>
       </a>
     </li>

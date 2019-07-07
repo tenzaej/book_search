@@ -62,7 +62,7 @@ RSpec.describe BooksController do
       class_double('Net::HTTP')
       expect(Net::HTTP).to receive(:get).and_return(File.read('spec/data/full-response.json'))
 
-      visit '/books?query=Cybernetics&page_number=8'
+      visit '/books?query=Cybernetics&page=8'
 
       within('ul.pagination') do
         expect(page).to have_selector('li.next-button')

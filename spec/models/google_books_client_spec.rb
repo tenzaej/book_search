@@ -18,7 +18,7 @@ RSpec.describe GoogleBooksClient do
     end
 
     it 'calls off to Google Books API' do
-      GoogleBooksClient.new(query: 'Rich Hickey', page_number: 3).call
+      GoogleBooksClient.new(query: 'Rich Hickey', page: 3).call
 
       expect(Net::HTTP).to have_received(:get).with(uri)
     end
@@ -42,17 +42,17 @@ RSpec.describe GoogleBooksClient do
       expect(GoogleBooksClient.new(query: 'Rich').query).to eq('Rich')
     end
 
-    describe '#page_number' do
-      it 'gets its formatted page_number' do
-        expect(GoogleBooksClient.new(page_number: '7').page_number).to eq(7)
+    describe '#page' do
+      it 'gets its formatted page' do
+        expect(GoogleBooksClient.new(page: '7').page).to eq(7)
       end
 
       it 'defaults to 1 if 0 is sent in' do
-        expect(GoogleBooksClient.new(page_number: 0).page_number).to eq(1)
+        expect(GoogleBooksClient.new(page: 0).page).to eq(1)
       end
 
-      it 'defaults to 1 if page_number parameter is missing' do
-        expect(GoogleBooksClient.new.page_number).to eq(1)
+      it 'defaults to 1 if page parameter is missing' do
+        expect(GoogleBooksClient.new.page).to eq(1)
       end
     end
   end

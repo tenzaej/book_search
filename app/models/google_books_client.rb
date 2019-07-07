@@ -6,11 +6,11 @@ class GoogleBooksClient
   GOOGLE_BOOKS_BASE = 'https://www.googleapis.com/books/v1/volumes'
   FIELDS_SPECIFICATION = '&fields=items(volumeInfo(title,authors,publisher,infoLink,imageLinks(smallThumbnail)))'
 
-  attr_reader :query, :page_number
+  attr_reader :query, :page
 
   def initialize(options = {})
     @query = options[:query]
-    @page_number = format_page_number(options[:page_number])
+    @page = format_page(options[:page])
   end
 
   def call
@@ -43,8 +43,8 @@ class GoogleBooksClient
     query.try(:strip)
   end
 
-  def format_page_number(page_number)
-    [page_number.to_i.floor, 1].max
+  def format_page(page)
+    [page.to_i.floor, 1].max
   end
 
   def query_string_parameter
@@ -52,6 +52,6 @@ class GoogleBooksClient
   end
 
   def start_index_parameter
-    "&startIndex=#{(page_number - 1) * 10}"
+    "&startIndex=#{(page - 1) * 10}"
   end
 end

@@ -16,6 +16,6 @@ class BooksController < ApplicationController
   private
 
   def query_params
-    params.slice(:query, :page_number)
+    params.slice(:query, :page)
   end
 end
