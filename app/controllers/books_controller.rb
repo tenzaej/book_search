@@ -7,6 +7,7 @@ class BooksController < ApplicationController
       parsed_response = HttpClient.new(GoogleBooksStrategy.new(query_params)).call
       BookCollection.new(parsed_response).assemble
     end
+    render partial: '/books/show', locals: {books: @books}
   rescue StandardError => e
     Rails.logger.info e.message
     @books = []

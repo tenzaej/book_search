@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # High performance memcached client for Ruby
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 
+gem 'webpacker', '~> 4.x'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
