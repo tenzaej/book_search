@@ -23,6 +23,9 @@ RSpec.describe BooksHelper, type: :helper do
   end
 
   describe '#calculate_page_range' do
+    it 'returns an empty array if on the first page with no books' do
+      expect(calculate_page_range(1, 0)).to eq([])
+    end
     it 'handles a nil count, incase someone went forward too many pages' do
       expect(calculate_page_range(7, 0)).to eq((2..7).to_a)
     end

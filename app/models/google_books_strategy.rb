@@ -7,7 +7,7 @@ class GoogleBooksStrategy
   attr_reader :query, :page
 
   def initialize(options)
-    @query = options[:query]
+    @query = options[:query].strip
     @page = format_page(options[:page])
   end
 

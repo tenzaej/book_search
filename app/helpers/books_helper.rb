@@ -1,5 +1,6 @@
 module BooksHelper
   def calculate_page_range(page, count)
+    return [] if page == 1 && count.zero?
     start_point = page - 5
     end_point   = (count < 10 ? page : page + 5)
     (start_point..end_point).select(&:positive?)

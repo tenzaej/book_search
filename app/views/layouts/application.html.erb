@@ -18,18 +18,19 @@
   <body>
     <div class="container" >
       <div class="sticky-nav" >
-        <h4>Book Search &nbsp; <a href="https://books.google.com"><%= image_tag('poweredbygoogle.png') %></a></h4>
-
+        <h4>Book Search &nbsp;
+          <a href="https://books.google.com">
+            <%= image_tag('poweredbygoogle.png') %>
+          </a>
+        </h4>
         <%= render "search_nav", query: @query %>
-
         <div id="pagination-nav">
-          <% if @page && @books.count > 0 %>
+          <% if @page %>
             <%= render "page_nav", page: @page, query: @query, books: @books %>
           <% end %>
         </div>
         <hr>
       </div>
-
       <div id="app-body" >
         <%= yield %>
       </div>
