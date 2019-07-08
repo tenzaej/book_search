@@ -11,11 +11,11 @@ module BooksHelper
 
     if field.respond_to?(:map)
       field
-        .map { |item| link_to item, books_path(query: item) }
+        .map { |item| link_to item, books_path(query: item, page: 1), remote: true }
         .join(', ')
         .html_safe
     else
-      link_to field, books_path(query: field).html_safe
+      link_to field, books_path(query: field, page: 1).html_safe, remote: true
     end
   end
 end
