@@ -12,13 +12,13 @@ RSpec.describe BooksHelper, type: :helper do
 
     it 'turns a single item into a single link' do
       actual = helper.generate_links('Leanpub')
-      expect(actual).to have_link('Leanpub', href: '/books?query=Leanpub')
+      expect(actual).to have_link('Leanpub', href: '/books?page=1&query=Leanpub')
     end
 
     it 'turns a collection of items into a collection of links' do
       actual = helper.generate_links(['Gilles Deleuze', 'Felix Guattari'])
-      expect(actual).to have_link('Gilles Deleuze', href: '/books?query=Gilles+Deleuze')
-      expect(actual).to have_link('Felix Guattari', href: '/books?query=Felix+Guattari')
+      expect(actual).to have_link('Gilles Deleuze', href: '/books?page=1&query=Gilles+Deleuze')
+      expect(actual).to have_link('Felix Guattari', href: '/books?page=1&query=Felix+Guattari')
     end
   end
 
