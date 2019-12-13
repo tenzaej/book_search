@@ -4,10 +4,10 @@ RSpec.describe GoogleBooksStrategy do
   let(:params) { { query: 'Erlang', page: 2 } }
   let(:http_client) { double('http_client', get: { 'books' => [] }.to_json) }
   let(:error_response) do
-    {'error' => {
-       'errors' => [],
-       'code' => 400,
-       'message' => 'Missing query.'
+    {:error => {
+       :errors => [],
+       :code => 400,
+       :message => 'Missing query.'
      }}.to_json
   end
 
@@ -19,7 +19,7 @@ RSpec.describe GoogleBooksStrategy do
 
     it 'returns the parsed response' do
       response = GoogleBooksStrategy.new(params).call(http_client)
-      expect(response).to eq('books' => [])
+      expect(response).to eq(:books => [])
     end
 
     it 'returns an error if the JSON contained an error' do

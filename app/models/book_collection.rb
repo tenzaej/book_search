@@ -5,7 +5,7 @@ class BookCollection
 
   def assemble
     @raw_data
-      .fetch('items', [])
+      .fetch(:items, [])
       .map { |response| Book.build_from_google_data(response) }
   end
 end

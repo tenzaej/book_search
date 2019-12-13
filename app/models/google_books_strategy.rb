@@ -12,9 +12,9 @@ class GoogleBooksStrategy
   end
 
   def call(http_client)
-    parsed_response = JSON.parse(http_client.get)
-    if parsed_response['error']
-      error_message = "Google Books API returned a code #{parsed_response.dig('error', 'code')} with the message '#{parsed_response.dig('error', 'message')}'"
+    parsed_response = JSON.parse(http_client.get, symbolize_names: true)
+    if parsed_response[:error]
+      error_message = "Google Books API returned a code #{parsed_response.dig(:error, :code)} with the message '#{parsed_response.dig(:error, :message)}'"
       raise ErrorResponse, error_message
     end
     parsed_response

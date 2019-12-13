@@ -1,16 +1,16 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Book do
   describe '#build_from_google_data' do
     context 'sets instance variables from google books response map' do
       let(:volume) do
         {
-          'volumeInfo' => {
-            'title' => 'Teatro Grottesco',
-            'authors' => ['Thomas Ligotti'],
-            'publisher' => 'Random House',
-            'imageLinks' => {'smallThumbnail' => 'http://link.to/image.png'},
-            'infoLink' => 'http://link.to/info'
+          :volumeInfo => {
+            :title => 'Teatro Grottesco',
+            :authors => ['Thomas Ligotti'],
+            :publisher => 'Random House',
+            :imageLinks => {:smallThumbnail => 'http://link.to/image.png'},
+            :infoLink => 'http://link.to/info'
           }
         }
       end

@@ -1,25 +1,25 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe BookCollection do
   describe '#assemble' do
     let(:raw_datas) do
-      { "items" => [
+      { :items => [
           {
-            "volumeInfo" => {
-              "title" => "Teatro Grottesco",
-              "authors" => ["Thomas Ligotti"],
-              "publisher" => "Random House",
-              "imageLinks" => {"smallThumbnail" => "http://link.to/image.png"},
-              "infoLink" => "http://link.to/info",
+            :volumeInfo => {
+              :title => "Teatro Grottesco",
+              :authors => ["Thomas Ligotti"],
+              :publisher => "Random House",
+              :imageLinks => {:smallThumbnail => "http://link.to/image.png"},
+              :infoLink => "http://link.to/info",
             }
           },
           {
-            "volumeInfo" => {
-              "title" => "Clean Code",
-              "authors" => ["Robert C. Martin"],
-              "publisher" => "Pearson Education",
-              "imageLinks" => {"smallThumbnail" => "http://link.to/image.jpg"},
-              "infoLink" => "http://link.to/otherinfo",
+            :volumeInfo => {
+              :title => "Clean Code",
+              :authors => ["Robert C. Martin"],
+              :publisher => "Pearson Education",
+              :imageLinks => {:smallThumbnail => "http://link.to/image.jpg"},
+              :infoLink => "http://link.to/otherinfo",
             }
           },
         ]
