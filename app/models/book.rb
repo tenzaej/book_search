@@ -17,15 +17,7 @@ class Book
 
   def self.processed_google_response(raw_data)
     book_info = raw_data[:volumeInfo]
-    # book_info.merge({:info_link => book_info.dig(:infoLink),
-                     # :thumbnail => book_info.dig(:imageLinks, :smallThumbnail)})
-    case book_info
-      in infoLink: i, imageLinks: {smallThumbnail: s}
-        book_info.merge({info_link: i, thumbnail: s})
-      in infoLink: i
-        book_info.merge({info_link: i})
-      in imageLinks: {smallThumbnail: s}
-        book_info.merge({thumbnail: s})
-    end
+    book_info.merge({:info_link => book_info.dig(:infoLink),
+                     :thumbnail => book_info.dig(:imageLinks, :smallThumbnail)})
   end
 end
