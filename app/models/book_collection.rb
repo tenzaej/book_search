@@ -6,6 +6,6 @@ class BookCollection
   def assemble
     @raw_data
       .fetch(:items, [])
-      .map { |response| Book.build_from_google_data(response) }
+      .map { Book.build_from_google_data(_1) }
   end
 end
