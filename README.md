@@ -23,11 +23,11 @@ After that, go into the directory...
 cd book_search
 ```
 
-...and make sure you've got dependencies installed. This app uses ruby 2.5.5 and an assortment of gems, so use whatever ruby version manager you prefer, and install the dependencies. For me, it looks something like this:
+...and make sure you've got dependencies installed. This app uses ruby 2.7.2 and an assortment of gems, so use whatever ruby version manager you prefer, and install the dependencies. For me, it looks something like this:
 
 ```
-rbenv install 2.5.5
-rbenv local 2.5.5
+rbenv install 2.7.2
+rbenv local 2.7.2
 gem install bundler
 bundle install
 ```
