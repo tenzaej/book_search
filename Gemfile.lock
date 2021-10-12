@@ -104,7 +104,8 @@ GEM
     parser (2.7.2.0)
       ast (~> 2.4.1)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -223,7 +224,7 @@ DEPENDENCIES
   dalli (~> 2.7, >= 2.7.6)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.3)
   rails-controller-testing
   rspec-rails
